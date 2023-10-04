@@ -3,6 +3,9 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,4 +70,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    // items to be added
+    // should be available in Restaurant
+    // price should be greater than zero
+    // price of all the items added should be equal to sum of their prices
+    @Test
+    public void totalOrderValue_for_items_sweet_corn_soup_and_vegetable_lasagne_should_be_388(){
+
+    }
 }
