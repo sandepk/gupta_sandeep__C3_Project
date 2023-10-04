@@ -80,12 +80,7 @@ class RestaurantTest {
         itemsNames.add("Sweet corn soup");
         itemsNames.add("Vegetable lasagne");
         Integer totalPrice = restaurant.getTotalOrderValue(itemsNames);
-        Integer expectedPrice = 0;
-        for(Item items: restaurant.getMenu()){
-            expectedPrice = expectedPrice + items.getPrice();
-
-        }
-
+        Integer expectedPrice = 388;
         assertEquals(expectedPrice, totalPrice);
 
 
