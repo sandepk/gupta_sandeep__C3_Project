@@ -76,6 +76,18 @@ class RestaurantTest {
     // price of all the items added should be equal to sum of their prices
     @Test
     public void totalOrderValue_for_items_sweet_corn_soup_and_vegetable_lasagne_should_be_388(){
+        List<String> itemsNames = new ArrayList<String>();
+        itemsNames.add("Sweet corn soup");
+        itemsNames.add("Vegetable lasagne");
+        Integer totalPrice = restaurant.getTotalOrderValue(itemsNames);
+        Integer expectedPrice = 0;
+        for(Item items: restaurant.getMenu()){
+            expectedPrice = expectedPrice + items.getPrice();
+
+        }
+
+        assertEquals(expectedPrice, totalPrice);
+
 
     }
 }

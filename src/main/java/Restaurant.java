@@ -61,4 +61,16 @@ public class Restaurant {
         return name;
     }
 
+
+    // price of all the items added should be equal to sum of their prices
+
+    public int getTotalOrderValue(List<String> itemNames) {
+        Integer totalPrice = 0;
+        for(String name: itemNames) {
+            Item menuItem = findItemByName(name);
+            totalPrice = totalPrice +  menuItem.getPrice();
+        }
+        return totalPrice;
+    }
+
 }
